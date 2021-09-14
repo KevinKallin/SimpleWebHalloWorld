@@ -12,4 +12,7 @@ jobs:
         dotnet-version: 5.0.x
     
     - name: Restore
-      run: dotnet restore 
+      run: dotnet restore SimpleWebHalloWorld.csproj
+    - name: Build
+      run: dotnet build --no-restore --verbosity normal SimpleWebHalloWorld.csproj
+      
