@@ -20,8 +20,8 @@ jobs:
         push: true
         context: ${ {env.working-directory} }/PROJECT_DIR
         tags: |
-          ghcr.io/DITT_USER_NAME/PROJECT:latest
-          ghcr.io/DITT_USER_NAME/PROJECT:${ { github.run_number } }
+          ghcr.io/kevinkallin/simplewebhalloworld:latest
+          ghcr.io/kevinkallin/simplewebhalloworld:${ { github.run_number } }
 
 
 
