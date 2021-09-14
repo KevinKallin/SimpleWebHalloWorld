@@ -22,7 +22,7 @@ jobs:
         push: true
         context: ${{ env.working-directory }}
         tags: |
-          ghcr.io/kevinkallin/simplewebhalloworld:master
+          ghcr.io/.kevinkallin/simplewebhalloworld:master
 
 
 
