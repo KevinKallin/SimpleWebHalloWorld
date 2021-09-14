@@ -15,4 +15,22 @@ jobs:
       run: dotnet restore SimpleWebHalloWorld.csproj
     - name: Build
       run: dotnet build --no-restore --verbosity normal SimpleWebHalloWorld.csproj
-      
+
+  jobs:
+    login:
+      runs-on: ubuntu-latest
+      steps:
+        -
+          name: Login To Github 
+          uses: docker/login-action/v1
+          with: 
+            registry: ghcr.io
+            username: ${{ github.KevinKallin }}
+            password: ${{ github.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 }}
+        - name: Build and push
+          id: docker_build
+          uses: docker/build-push-action@v2.7.0
+          with: 
+            push: true
+            context: ${ {env.working-directory} }/PROJECT_DIR
+            
