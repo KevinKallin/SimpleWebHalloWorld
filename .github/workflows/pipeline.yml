@@ -16,12 +16,10 @@ jobs:
     - name: Build
       run: dotnet build --no-restore --verbosity normal SimpleWebHalloWorld.csproj
 
-  jobs:
     login:
       runs-on: ubuntu-latest
-      steps:
-        -
-          name: Login To Github 
+      
+        - name: Login To Github 
           uses: docker/login-action/v1
           with: 
             registry: ghcr.io
