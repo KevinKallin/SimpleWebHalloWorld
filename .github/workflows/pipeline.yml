@@ -18,10 +18,9 @@ jobs:
       uses: docker/build-push-action@v2.7.0
       with:
         push: true
-        context: ${ {env.working-directory} }/PROJECT_DIR
+        context: ${ {env.working-directory} }
         tags: |
-          ghcr.io/kevinkallin/simplewebhalloworld:latest
-          ghcr.io/kevinkallin/simplewebhalloworld:${ { github.run_number } }
+          ghcr.io/kevinkallin/simplewebhalloworld:master
 
 
 
