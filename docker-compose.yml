@@ -1,6 +1,6 @@
-version: "3.9"
+version: "3.8"
 services:
   frontend:
     build: .
     ports:
-        - 5001:81
+        - 5001:80
