@@ -4,7 +4,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
-    - name: Set up VM
+    - name: Set up vm
       uses: docker/setup-qemu-action@v1
     - name: Set up docker image
       uses: docker/setup-buildx-action@v1
