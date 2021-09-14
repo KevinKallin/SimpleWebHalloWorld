@@ -24,7 +24,7 @@ jobs:
           push: true
           context: ${{ env.working-directory }}
           tags: |
-            ghcr.io/mazdake/test:latest
+            ghcr.io/kevinkallin/test:latest
 
 
 # === TEST === 
