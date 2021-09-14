@@ -15,15 +15,19 @@ jobs:
         registry: ghcr.io
         username: ${{ github.actor }};
         password: ${{ secrets.CR_PAT }}
-    - name: Build and push
+    - name: Build the image
       id: docker_build
       uses: docker/build-push-action@v2
       with:
-        push: true
-        context: ${{ env.working-directory }}
-        tags: |
-          ghcr.io/kevinkallin/simplewebhalloworld:latest
+        tags: ${{ steps.docker_meta.outputs.tags }}
+        file: ./Dockerfile
 
+    - name: Push the image
+      uses: docker/build-push-action@v2
+      with: 
+        push: true
+        tags: ${{ steps.docker_meta.outputs.tags }}
+        file: ./Dockerfile
 
 
 
